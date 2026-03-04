@@ -1,10 +1,10 @@
 {
-	"name": "pl_ssms_azure_sql_db",
+	"name": "pl_ssms_adls",
 	"properties": {
 		"activities": [
 			{
-				"name": "copy_ssms_azure_sql_db",
-				"description": "I am copying the table from ssms to azure sql database",
+				"name": "Copy data1",
+				"description": "copy data from ssms table to adls csv file",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -22,11 +22,15 @@
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false,
-						"tableOption": "autoCreate",
-						"disableMetricsCollection": false
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -56,15 +60,11 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_azure_sqldb",
+						"referenceName": "ds_adls",
 						"type": "DatasetReference",
 						"parameters": {
-							"sink_schema": {
-								"value": "@pipeline().parameters.sink_schema",
-								"type": "Expression"
-							},
-							"sink_tablename": {
-								"value": "@pipeline().parameters.sink_table",
+							"filename": {
+								"value": "@pipeline().parameters.sink_filename",
 								"type": "Expression"
 							}
 						}
@@ -73,21 +73,16 @@
 			}
 		],
 		"parameters": {
-			"source_schema": {
-				"type": "string"
-			},
 			"source_table": {
 				"type": "string"
 			},
-			"sink_schema": {
+			"source_schema": {
 				"type": "string"
 			},
-			"sink_table": {
+			"sink_filename": {
 				"type": "string"
 			}
 		},
-		"annotations": [],
-		"lastPublishTime": "2026-03-04T03:14:59Z"
-	},
-	"type": "Microsoft.DataFactory/factories/pipelines"
+		"annotations": []
+	}
 }
