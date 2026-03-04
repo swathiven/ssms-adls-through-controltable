@@ -1,5 +1,5 @@
 # ssms-adls-through controltable
-Project: Data Movement from SQL Server to Azure SQL Database and ADLS using Control Table in Azure Data Factory
+**Project**: Data Movement from SQL Server to Azure SQL Database and ADLS using Control Table in Azure Data Factory
 
 Designed and implemented an ETL solution to copy data from multiple SQL Server tables to Azure SQL Database and Azure Data Lake Storage (ADLS) using Azure Data Factory (ADF).
 
