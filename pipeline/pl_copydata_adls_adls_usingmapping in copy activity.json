@@ -48,6 +48,20 @@
 						}
 					},
 					"enableStaging": false,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Info",
+							"enableReliableLogging": false
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "ls_adls",
+								"type": "LinkedServiceReference"
+							},
+							"path": "data/input"
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
