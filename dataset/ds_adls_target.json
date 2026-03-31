@@ -1,5 +1,5 @@
 {
-	"name": "ds_adls",
+	"name": "ds_adls_target",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls",
@@ -24,7 +24,7 @@
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
+			"firstRowAsHeader": false,
 			"quoteChar": "\""
 		},
 		"schema": []

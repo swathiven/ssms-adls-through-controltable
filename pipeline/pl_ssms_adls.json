@@ -60,7 +60,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_adls",
+						"referenceName": "ds_adls_target",
 						"type": "DatasetReference",
 						"parameters": {
 							"filename": {
