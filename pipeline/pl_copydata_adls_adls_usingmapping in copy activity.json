@@ -159,7 +159,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"outputfilename": {
-								"value": "@pipeline().parameters.targetfilename",
+								"value": "@pipeline().parameters.ouputfilename",
 								"type": "Expression"
 							}
 						}
