@@ -22,10 +22,7 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "ds_adls_target",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "*"
-						}
+						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
 						"linkedServiceName": {
