@@ -61,7 +61,7 @@
 								"referenceName": "ls_adls",
 								"type": "LinkedServiceReference"
 							},
-							"path": "data/input"
+							"path": "data/ouput"
 						}
 					},
 					"translator": {
