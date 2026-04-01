@@ -3,19 +3,7 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Stopped",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "pipeline1",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"body": "@string(triggerBody())",
-					"file": "@triggerBody()",
-					"folder": "@triggerBody()"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/data/blobs/input/",
