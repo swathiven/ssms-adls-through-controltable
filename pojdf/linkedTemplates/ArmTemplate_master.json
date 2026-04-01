@@ -79,6 +79,22 @@
 			"type": "string",
 			"defaultValue": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
 		},
+		"trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_inputfilename": {
+			"type": "string",
+			"defaultValue": "BulkRun"
+		},
+		"trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_outputfilename": {
+			"type": "string",
+			"defaultValue": "BulkRun"
+		},
+		"trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_folderpath": {
+			"type": "string",
+			"defaultValue": "@triggerBody().filePath"
+		},
+		"trigger3_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -159,6 +175,18 @@
 					},
 					"trigger2_properties_typeProperties_scope": {
 						"value": "[parameters('trigger2_properties_typeProperties_scope')]"
+					},
+					"trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_inputfilename": {
+						"value": "[parameters('trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_inputfilename')]"
+					},
+					"trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_outputfilename": {
+						"value": "[parameters('trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_outputfilename')]"
+					},
+					"trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_folderpath": {
+						"value": "[parameters('trigger3_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_folderpath')]"
+					},
+					"trigger3_properties_typeProperties_scope": {
+						"value": "[parameters('trigger3_properties_typeProperties_scope')]"
 					}
 				}
 			},
