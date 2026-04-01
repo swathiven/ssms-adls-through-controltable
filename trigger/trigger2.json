@@ -11,7 +11,7 @@
 				},
 				"parameters": {
 					"inputfilename": "@triggerBody().fileName",
-					"targetfilename": "@triggerBody().fileName"
+					"ouputfilename": "@triggerBody().fileName"
 				}
 			}
 		],
