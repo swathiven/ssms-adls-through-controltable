@@ -49,11 +49,11 @@
 		},
 		"trigger1_properties_pipeline1_parameters_body": {
 			"type": "string",
-			"defaultValue": "@string(triggerbody())"
+			"defaultValue": "@triggerBody().folderPath"
 		},
 		"trigger1_properties_pipeline1_parameters_file": {
 			"type": "string",
-			"defaultValue": "@string(triggerbody())"
+			"defaultValue": "@triggerBody().fileName"
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"type": "string",
