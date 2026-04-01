@@ -47,6 +47,15 @@
 		"trigger1_properties_typeProperties_scope": {
 			"value": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
 		},
+		"trigger2_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_inputfilename": {
+			"value": "@triggerBody().fileName"
+		},
+		"trigger2_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_outputfilename": {
+			"value": "@triggerBody().fileName"
+		},
+		"trigger2_properties_typeProperties_scope": {
+			"value": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
+		},
 		"containerUri": {
 			"value": ""
 		},
