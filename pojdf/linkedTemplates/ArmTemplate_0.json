@@ -82,6 +82,26 @@
 		"trigger3_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_inputfilename": {
+			"type": "string",
+			"defaultValue": "BulkRun"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_outputfilename": {
+			"type": "string",
+			"defaultValue": "BulkRun"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_folderpath": {
+			"type": "string",
+			"defaultValue": "@triggerBody().folderPath"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_filename": {
+			"type": "string",
+			"defaultValue": "@triggerBody().fileName"
+		},
+		"trigger4_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
 		}
 	},
 	"variables": {
@@ -663,7 +683,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -681,9 +701,45 @@
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
 					"blobPathBeginsWith": "/data/blobs/input/",
-					"blobPathEndsWith": ".txt",
+					"blobPathEndsWith": "*.txt",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('trigger3_properties_typeProperties_scope')]",
+					"events": [
+						"Microsoft.Storage.BlobCreated"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/pl_copydata_adls_adls_usingmapping in copy activity')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger4')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pl_copydata_adls_adls_usingmapping in copy activity",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"inputfilename": "[parameters('trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_inputfilename')]",
+							"outputfilename": "[parameters('trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_outputfilename')]",
+							"folderpath": "[parameters('trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_folderpath')]",
+							"filename": "[parameters('trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_filename')]"
+						}
+					}
+				],
+				"type": "BlobEventsTrigger",
+				"typeProperties": {
+					"blobPathBeginsWith": "/data/blobs/input/",
+					"blobPathEndsWith": ".txt",
+					"ignoreEmptyBlobs": true,
+					"scope": "[parameters('trigger4_properties_typeProperties_scope')]",
 					"events": [
 						"Microsoft.Storage.BlobCreated"
 					]
