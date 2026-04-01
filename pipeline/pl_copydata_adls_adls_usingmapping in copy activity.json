@@ -173,6 +173,9 @@
 			},
 			"outputfilename": {
 				"type": "string"
+			},
+			"folderpath": {
+				"type": "string"
 			}
 		},
 		"annotations": []
