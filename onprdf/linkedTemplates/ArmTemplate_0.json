@@ -450,7 +450,7 @@
 								"formatSettings": {
 									"type": "DelimitedTextWriteSettings",
 									"quoteAllText": true,
-									"fileExtension": ".xml"
+									"fileExtension": ".csv"
 								}
 							},
 							"enableStaging": false,
