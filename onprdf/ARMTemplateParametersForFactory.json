@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "onprdf"
+		},
+		"ls_adls_accountKey": {
+			"value": ""
+		},
+		"ls_azuresql_password": {
+			"value": ""
+		},
+		"ls_ssms_password": {
+			"value": ""
+		},
+		"ls_adls_properties_typeProperties_url": {
+			"value": "https://projectstorage321.dfs.core.windows.net/"
+		},
+		"ls_azuresql_properties_typeProperties_server": {
+			"value": "tanvi.database.windows.net"
+		},
+		"ls_azuresql_properties_typeProperties_database": {
+			"value": "tanvi"
+		},
+		"ls_azuresql_properties_typeProperties_userName": {
+			"value": "adf_user"
+		},
+		"ls_ssms_properties_typeProperties_server": {
+			"value": "LAPTOP-A61EKOP8"
+		},
+		"ls_ssms_properties_typeProperties_database": {
+			"value": "tanvi"
+		},
+		"ls_ssms_properties_typeProperties_userName": {
+			"value": "adf_user"
+		},
+		"trigger1_properties_pipeline1_parameters_body": {
+			"value": "@triggerBody().filePath"
+		},
+		"trigger1_properties_pipeline1_parameters_file": {
+			"value": "@triggerBody().fileName"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
+		},
+		"trigger2_properties_typeProperties_scope": {
+			"value": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
+		},
+		"trigger3_properties_typeProperties_scope": {
+			"value": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_inputfilename": {
+			"value": "BulkRun"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_outputfilename": {
+			"value": "BulkRun"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_folderpath": {
+			"value": "@triggerBody().folderPath"
+		},
+		"trigger4_properties_pl_copydata_adls_adls_usingmapping in copy activity_parameters_filename": {
+			"value": "@triggerBody().fileName"
+		},
+		"trigger4_properties_typeProperties_scope": {
+			"value": "/subscriptions/435059ae-f4a8-4963-b132-361a892d8586/resourceGroups/proman/providers/Microsoft.Storage/storageAccounts/projectstorage321"
+		}
+	}
+}
