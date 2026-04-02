@@ -17,11 +17,11 @@
 				"userProperties": [
 					{
 						"name": "Source",
-						"value": "data/input/@{pipeline().parameters.inputfilename}"
+						"value": "data/input/"
 					},
 					{
 						"name": "Destination",
-						"value": "data/ouput/@{pipeline().parameters.outputfilename}"
+						"value": "data/ouput/"
 					}
 				],
 				"typeProperties": {
@@ -47,7 +47,7 @@
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
 							"quoteAllText": true,
-							"fileExtension": ""
+							"fileExtension": ".xml"
 						}
 					},
 					"enableStaging": false,
@@ -158,14 +158,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"folderpath": {
-				"type": "string"
-			},
-			"filename": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }

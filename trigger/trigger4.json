@@ -8,10 +8,6 @@
 				"pipelineReference": {
 					"referenceName": "pl_copydata_adls_adls_usingmapping in copy activity",
 					"type": "PipelineReference"
-				},
-				"parameters": {
-					"folderpath": "@triggerBody().folderPath",
-					"filename": "@triggerBody().fileName"
 				}
 			}
 		],
