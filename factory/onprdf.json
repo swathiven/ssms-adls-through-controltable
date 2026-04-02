@@ -1,0 +1,9 @@
+{
+	"name": "onprdf",
+	"location": "austriaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "305ef2dd-a7ee-4a8f-a574-c88d74b68c74",
+		"tenantId": "637e6c1d-10ab-4258-92b1-9783d1406909"
+	}
+}
