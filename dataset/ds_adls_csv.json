@@ -1,24 +1,20 @@
 {
-	"name": "ds_adls_txttarget",
+	"name": "ds_adls_csv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "ouput",
+				"folderPath": "out3",
 				"fileSystem": "data"
 			},
-			"columnDelimiter": ",",
-			"escapeChar": "\\",
-			"firstRowAsHeader": false,
-			"quoteChar": "\""
+			"compressionCodec": "snappy"
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
