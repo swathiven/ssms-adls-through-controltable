@@ -1,0 +1,17 @@
+{
+	"name": "ls_azure_sqldb",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "tanvi1.database.windows.net",
+			"database": "swathi",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "adf_user",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDc1MjAzMjEzLUVCMTctNDVFNC04QzU5LUYzREY2QzU3MTc3RF9iYjM5YjVlOS0yZThjLTQ2ZmUtYTAzZC1iZTlmZmY2MmQyOWIiDQp9"
+		}
+	}
+}
