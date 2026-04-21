@@ -33,6 +33,8 @@
 				"type": "String"
 			}
 		},
-		"annotations": []
+		"annotations": [
+			"sales"
+		]
 	}
 }

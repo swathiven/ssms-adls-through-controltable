@@ -260,6 +260,8 @@
 				"type": "String"
 			}
 		},
-		"annotations": []
+		"annotations": [
+			"prod"
+		]
 	}
 }
